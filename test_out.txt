@@ -1,0 +1,2 @@
+No MONGODB_URI set — running in-memory (demo mode). Data resets on restart.
+Find2Stay running → http://localhost:3000  (db: memory)

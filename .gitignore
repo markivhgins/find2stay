@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Logs and debug output
+*.log
+npm-debug.log*
+
+# Build and test output
+dist/
+coverage/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Database backups and dumps
+*.bson
+*.dump
+*.archive
+*.backup
