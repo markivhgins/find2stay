@@ -71,36 +71,6 @@ Go to `/login`. Seven room-key cards let you pick a role — no password require
 
 ---
 
-## Demo walkthrough for a Monday presentation
-
-1. **Browse** — `/pg`, `/flats`, `/society` with filters. Each card shows the floor plan, verified date and itemised pricing.
-2. **Enquire** — open any listing, fill the visit request form (name, 10-digit phone, consent checkbox).
-3. **Track** — sign in as Visitor, go to `/activity`. The enquiry appears with a progress bar.
-4. **Owner desk** — sign in as Owner (`/owner`). Confirm availability, pause a listing, see leads.
-5. **Submit a property** — Owner desk → New listing. Fill the form and submit.
-6. **Verify** — sign in as Verifier (`/verifier`). Tick all three checks, click Approve. The listing appears in search.
-7. **Operations** — sign in as Ops (`/admin`). Advance the visit from Requested → Confirming → Scheduled.
-8. **Service request** — `/services/food`, fill the form. Sign in as Partner · Tiffin, go to `/provider`, accept the request.
-
----
-
-## Deploying to Hostinger (Node.js hosting)
-
-1. Upload the project files (without `node_modules` and `.env`).
-2. In the Hostinger panel, set environment variables:
-   - `MONGODB_URI` — your Atlas connection string
-   - `DB_NAME` — `find2stay`
-   - `SESSION_SECRET` — a strong random string (run `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"`)
-   - `NODE_ENV` — `production`
-   - `REQUIRE_MONGODB` — `true`
-   - `PORT` — leave unset; Hostinger injects it automatically
-3. Set the entry point to `server.js`.
-4. The app starts only after the DB connection succeeds (or exits with a clear error if `REQUIRE_MONGODB=true`).
-
-> Do not change the company's live DNS or domain settings. Deploy only with explicit permission.
-
----
-
 ## Architecture notes
 
 - **No OTP or real auth.** The demo sign-in is clearly labelled as demo-only.
